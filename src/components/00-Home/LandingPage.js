@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
 import { InnerWrapper, OuterWrapper, H2 } from "../ReusableStyles";
-import Header from "./Header";
+import Header from "../Header";
 import homeBackGround from '../../assets/home/background-home-mobile.jpg'
 
 
@@ -28,10 +28,7 @@ const LandingPage = () => {
 export default LandingPage;
   
  const HomeOuterWrapper = styled(OuterWrapper)`
-  max-height: 100vh;
   background-image: url(${homeBackGround});
-  background-size: 100% 100%;
-  background-position: center;
 ` 
 
 const HomeH2 = styled(H2)`

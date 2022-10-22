@@ -1,13 +1,14 @@
 import React from 'react';
-import LandingPage from './components/00 Home/LandingPage';
+import LandingPage from './components/00-Home/LandingPage';
 import styled from 'styled-components';
-import Header from './components/00 Home/Header';
+import Header from './components/Header';
 import { OuterWrapper } from './components/ReusableStyles';
+import Moon from './components/01-Destinations/Moon';
 
 const App = () => {
   return (
     <div>
-      <LandingPage />
+      <Moon />
     </div>
   )
 }

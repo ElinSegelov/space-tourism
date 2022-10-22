@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
 // import { Link } from "react-router-dom";
-import logo from "../../assets/shared/logo.svg"
-import hamburger from "../../assets/shared/icon-hamburger.svg"
-import close from "../../assets/shared/icon-close.svg"
-import { NavText } from "../ReusableStyles";
+import logo from "../assets/shared/logo.svg"
+import hamburger from "../assets/shared/icon-hamburger.svg"
+import close from "../assets/shared/icon-close.svg"
+import { NavText } from "./ReusableStyles";
 
 const Header = () => {
   const [navMenuActive, setNavMenuActive] = useState(false)
@@ -43,11 +43,13 @@ export default Header;
 const Logo = styled.img`
   width: 3rem;
   height: 3rem;
+  margin-left: 0.5rem;
 
 `
 
 const StyledHeader = styled.header`
-
+position: relative;
+top: 1rem;
 width: 100vw;
 display: flex;
 justify-content: space-between;
