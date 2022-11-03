@@ -1,15 +1,22 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import LandingPage from './components/00-Home/LandingPage';
 import styled from 'styled-components';
 import Header from './components/Header';
 import { OuterWrapper } from './components/ReusableStyles';
-import Moon from './components/01-Destinations/Moon';
+import Destinations from './components/01-Destinations/Destinations';
+import Crew from './components/02-Crew/Crew';
+
 
 const App = () => {
   return (
-    <div>
-      <Moon />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<LandingPage />} />
+        <Route path='/destination' element={<Destinations />} />
+        <Route path='/crew' element={<Crew />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

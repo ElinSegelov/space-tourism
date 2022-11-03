@@ -5,6 +5,7 @@ import logo from "../assets/shared/logo.svg"
 import hamburger from "../assets/shared/icon-hamburger.svg"
 import close from "../assets/shared/icon-close.svg"
 import { NavText } from "./ReusableStyles";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [navMenuActive, setNavMenuActive] = useState(false)
@@ -28,10 +29,10 @@ const Header = () => {
           </Hamburger> }
         <NavLinkWrapper style={navMenuActive? {display:'flex'} : {display:'none'} }>
           <NavLinks>
-            <a href="hhtp://www.google.com" to="/"><NavText> 00 Home</NavText></a>
-            <a href="hhtp://www.google.com" to="/destination"><NavText> 01 Destination</NavText></a>
-            <a href="hhtp://www.google.com" to="/crew"><NavText> 02 Crew</NavText></a>
-            <a href="hhtp://www.google.com" to="/technology"><NavText> 03 Technology</NavText></a>
+            <NavLink to="/"><NavText> 00 Home</NavText></NavLink>
+            <NavLink to="/destination"><NavText> 01 Destination</NavText></NavLink>
+            <NavLink to="/crew"><NavText> 02 Crew</NavText></NavLink>
+            <NavLink to="/technology"><NavText> 03 Technology</NavText></NavLink>
           </NavLinks>
         </NavLinkWrapper>  
     </StyledHeader>

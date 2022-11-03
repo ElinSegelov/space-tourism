@@ -19,13 +19,22 @@ export const H3 = styled.h3`
     font-size: 56px;
   }
 `
+
+export const Heading4 = styled.h3`
+  font-size: 16px;
+  font-family: 'Bellefair', serif;
+  margin-bottom: 0.5rem;
+@media (min-width: 600px) {
+  font-size: 32px;
+}
+`
+
 export const FirstPageHeading = styled.h2`
   font-size: 16px;
   letter-spacing: 2.7px;
 	font-family: 'Barlow Condensed', sans-serif;
   span {
     color: #626262;
-    font-weight: 700;
   }
 
   @media (min-width: 600px) {
@@ -80,9 +89,22 @@ export const InnerWrapper = styled.main`
       justify-content: space-between;
       list-style: none;
     }
+    li button {
+      background-color: transparent;
+      font-size: 16px;
+      font-family: 'Barlow Condensed', sans-serif;
+      letter-spacing: 2.7px;
+      text-transform: uppercase;
+      color: var(--secondaryText);
+    }
   `
 
 export const DestinationImg = styled.img`
   width: 10rem;
   margin: 2rem 0;
+`
+
+export const CrewImage = styled.img`
+  width: 10rem;
+  margin-top: 2rem;
 `
