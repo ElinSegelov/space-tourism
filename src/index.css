@@ -12,13 +12,13 @@ body {
 	background-color: var(--dark);
 	color: var(--secondary-text);
 	max-height: 100vh;
-	overflow: hidden;
 }
 
 :root {
 	--dark: #0B0D17;
+	--bg-nav: #191b23;
   --primary-text: #D0D6F9;
-  --secondary-text: #FFFFFF;
+  --secondary-text: rgb(255, 255, 255);
 	font-family: 'Bellefair', serif;
 }
 
@@ -31,6 +31,7 @@ h1 {
 h2 {
 	font-size: 80px;
 	text-transform: uppercase;
+	
 }
 
 h3 {
@@ -55,4 +56,11 @@ p {
 	color: var(--primary-text);
 	font-size: 16px;
 	line-height: 25px;
+	letter-spacing: 1px;
+}
+
+@media(min-width: 600px) {
+	.active {
+		border-bottom: 3px solid white;
+	}
 }

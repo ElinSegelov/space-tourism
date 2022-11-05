@@ -4,6 +4,10 @@ import { Heading4, Subheading1, CrewImage } from "../ReusableStyles";
 import commander from '../../assets/crew/image-douglas-hurley.webp'
 
 const SelectedCrewMember = ({name, image, role, bio}) => {
+  // Måste lägga till funktionalitet för att välja crew med klick på prick
+  //och med svep. Fixa färg på prickar och linje.
+  // Fixa bild från json istf dummy
+  // Fixa carousel för crew - info & bilder
   return (
     <section>
       <ImageContainer>
@@ -11,10 +15,10 @@ const SelectedCrewMember = ({name, image, role, bio}) => {
         {/* <img src={`${image}`} alt={name} /> */}
       </ImageContainer>
       <DotContainer>
-        <Dot />
-        <Dot />
-        <Dot />
-        <Dot />
+        <Dot type="button" />
+        <Dot type="button" />
+        <Dot type="button" />
+        <Dot type="button" />
       </DotContainer>
       <Heading4>{role}</Heading4>
       <CrewName>{name}</CrewName>
@@ -38,7 +42,7 @@ const DotContainer = styled.div`
   margin: 2rem auto;
   
 `
-const Dot = styled.div`
+const Dot = styled.button`
   width: 0.6rem;
   height: 0.6rem;
   border-radius: 5rem;

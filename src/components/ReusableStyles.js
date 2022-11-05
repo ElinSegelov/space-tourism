@@ -54,10 +54,23 @@ export const Subheading2 = styled.h3`
   margin-bottom: 1rem;
 `
 export const NavText = styled.li`
-  font-size: 16px;
+  font-size: 20px;
   font-family: 'Barlow Condensed', sans-serif;
   letter-spacing: 2.7px;
   text-transform: uppercase;
+  color: var(--secondary-text);
+  margin: 1rem;
+  
+  @media (min-width: 600px) {
+    margin: 0;
+    font-size: 14px;
+    padding: 2.4rem 0;
+    }
+  span {
+    @media (min-width: 600px) {
+      display: none;
+    }
+  }
 `
 export const OuterWrapper = styled.div`
   max-height: 100vh;
@@ -79,11 +92,20 @@ export const InnerWrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  @media (min-width: 600px) {
+    height: 80vh;
+    width: 80vw;
+  }
   `
 
   export const MidPageNav = styled.nav`
     width: 90%;
     margin: 0 auto;
+
+    @media (min-width: 600px) {
+    width: 35vw;
+    }
     ul {
       display: flex;
       justify-content: space-between;

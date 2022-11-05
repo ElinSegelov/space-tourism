@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
-// import { Link } from "react-router-dom";
 import logo from "../assets/shared/logo.svg"
 import hamburger from "../assets/shared/icon-hamburger.svg"
 import close from "../assets/shared/icon-close.svg"
 import { NavText } from "./ReusableStyles";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-const Header = () => {
+const Header = () => {  
   const [navMenuActive, setNavMenuActive] = useState(false)
   const showNavLinks = () => {
     if (navMenuActive === false) {
@@ -18,7 +17,7 @@ const Header = () => {
   }
   return (
     <StyledHeader>
-      <Logo src={logo} alt="home logo" />
+      <Link to="/"><Logo src={logo} alt="home logo" /></Link>
       <Line></Line>
          { !navMenuActive ?
           <Hamburger onClick={showNavLinks}>
@@ -29,10 +28,10 @@ const Header = () => {
           </Hamburger> }
         <NavLinkWrapper style={navMenuActive? {display:'flex'} : {display:'none'} }>
           <NavLinks>
-            <NavLink to="/"><NavText> 00 Home</NavText></NavLink>
-            <NavLink to="/destination"><NavText> 01 Destination</NavText></NavLink>
-            <NavLink to="/crew"><NavText> 02 Crew</NavText></NavLink>
-            <NavLink to="/technology"><NavText> 03 Technology</NavText></NavLink>
+            <NavLink to="/"><NavText> <span>00</span> Home</NavText></NavLink>
+            <NavLink to="/destination"><NavText> <span>01</span> Destination</NavText></NavLink>
+            <NavLink to="/crew"><NavText> <span>02</span> Crew</NavText></NavLink>
+            <NavLink to="/technology"><NavText> <span>03</span> Technology</NavText></NavLink>
           </NavLinks>
         </NavLinkWrapper>  
     </StyledHeader>
@@ -42,30 +41,44 @@ const Header = () => {
 export default Header;
 
 const Logo = styled.img`
-  width: 3rem;
-  height: 3rem;
-  margin-left: 0.5rem;
-
+  width: 2rem;
+  height: 2rem;
+  
+  @media (min-width: 600px) {
+    margin: -1rem 0 0 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
 `
 
 const StyledHeader = styled.header`
-position: relative;
-top: 1rem;
-width: 100vw;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding:1rem;
-height: 10vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:1rem;
+  height: 10vh;
 `
 const NavLinkWrapper = styled.nav`
   position: absolute;
   top: 0;
-  right: -2rem;
+  right: 0;
   width: 70%;
   height: 100vh;
   backdrop-filter: blur(8px);
   z-index: 1;
+  
+  @media (min-width: 600px) {
+    height: 6rem;
+    background-color: var(--bg-nav);
+    backdrop-filter: none;
+    display: flex !important;;
+    align-items: center;
+    justify-content: center;
+    width: 55vw;
+    
+  }
 `
 const NavLinks = styled.ul`
   display: flex;
@@ -74,19 +87,24 @@ const NavLinks = styled.ul`
   top: 8rem;
   margin-left: 1rem;
   list-style: none;
-   
-  li {
-    font-size: 20px;
-    text-transform: uppercase;
-    margin: 1rem;
-    color: var(--secondary-text)
-   }
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    position: static;
+    margin: 0;
+    justify-content: space-around;
+    width: 80%;
+  }
 `
 
 const Hamburger = styled.div`
   z-index: 2;
   position: absolute;
   right: 2rem;
+
+  @media (min-width: 600px) {
+    display: none;
+  }
   
   img {
     width: 1.5rem;

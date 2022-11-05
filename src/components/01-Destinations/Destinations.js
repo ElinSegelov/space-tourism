@@ -9,23 +9,28 @@ import {
 import Header from "../Header";
 import destinationBackground from '../../assets/destination/background-destination-mobile.jpg';
 import { DestinationImg } from "../ReusableStyles";
-import data from '../../data.json';
+// import data from '../../data';
 import SelectedDestination from "./SelectedDestination";
-import moon from '../../assets/destination/image-moon.webp'
+import jsdata from '../../data1'
 
 // IMPORTERA FÖR FONTWEIGHT /==
 const Destinations = () => {
-
+  //Har försökt importera från js-fil istället för json men utan success
+  console.log('jsdata', jsdata[0].destinations)
+  const data = jsdata[0].destinations
   const [selectedDestination, setSelectedDestination] = useState('moon');
-  const [choice, setChoice] = useState(data.destinations[0])
+  const [choice, setChoice] = useState(data[0])
   let selected;
   
   const selectDestination = (e) => {
     console.log('event target value', e.target.value)
     setSelectedDestination(e.target.value)
-    selected = data.destinations.filter((destination) => destination.name === selectedDestination);
+    selected = data.filter((destination) => destination.name === selectedDestination);
+    
     setChoice(...selected)
   }
+  console.log('den här är choice', choice)
+
   
   useEffect(()=> {
     // PROBLEM ATT CHOICE BLIR UNDEFINED FÖRSTA GÅNGEN MAN TRYCKER
@@ -36,12 +41,13 @@ const Destinations = () => {
     console.log(selectedDestination, 'bilden-src:', choice.images.webp)
 
     return (
-    <MoonOuterWrapper>
+    <DestinationOuterWrapper>
       <Header />
       <InnerWrapper>
       <FirstPageHeading><span>01</span> Pick your destination</FirstPageHeading>
       {/* <DestinationImg src={moon} alt={choice.name} /> */}
-      <DestinationImg src={`${choice.images.webp}`} alt={choice.name} />
+      {/* !!!! Raden nedanför funkade i någon min sen, oklart varför slutade det fungera !!!!*/}
+      <DestinationImg src={choice.images.webp} alt={choice.name} /> 
       <MidPageNav>
         <ul>
           <li><button value="Moon" onClick={selectDestination}>Moon</button></li>
@@ -56,13 +62,13 @@ const Destinations = () => {
           distance={choice.distance}
           travel={choice.travel} />
       </InnerWrapper>
-    </MoonOuterWrapper>
+    </DestinationOuterWrapper>
   )
 }
 
 export default Destinations;
 
-const MoonOuterWrapper = styled(OuterWrapper)`
+const DestinationOuterWrapper = styled(OuterWrapper)`
  background-image: url(${destinationBackground});
 
 `
