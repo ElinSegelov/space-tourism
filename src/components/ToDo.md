@@ -1,4 +1,3 @@
-fixa med useEffect så att selected destination uppdateras ordentligt.
 Importera bilder
 
 ##TABLET
