@@ -14,20 +14,11 @@ import SelectedDestination from "./SelectedDestination";
 // IMPORTERA FÖR FONTWEIGHT /==
 const Destinations = () => {
   const destinationData = data.destinations
-  const [selectedDestination, setSelectedDestination] = useState('moon');
   const [choice, setChoice] = useState(destinationData[0])
-  let selected;
   
-  const selectDestination = (e) => {
-    console.log('event target value', e)
-    setSelectedDestination(e)
-    selected = destinationData.find((destination) => destination.name === e);
-    console.log(selected)
-    setChoice(selected)
+  const selectDestination = (value) => {
+    setChoice(destinationData.find((destination) => destination.name === value))
   }
-
-    console.log(selectedDestination, 'bilden-src:', choice.images.webp)
-
     return (
     <DestinationOuterWrapper>
       <Header />
@@ -42,11 +33,7 @@ const Destinations = () => {
           <li><button value="Titan" onClick={(e) => selectDestination(e.target.value)}>Titan</button></li>
         </ul>
       </MidPageNav>
-      <SelectedDestination
-          name={choice.name}
-          description={choice.description}
-          distance={choice.distance}
-          travel={choice.travel} />
+      <SelectedDestination destination={choice} />
       </InnerWrapper>
     </DestinationOuterWrapper>
   )

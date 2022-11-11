@@ -2,21 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import { Subheading1, Subheading2, DestinationH1 } from "../ReusableStyles";
 
-const SelectedDestination = ({name, description, distance, travel}) => {
+const SelectedDestination = ({ destination }) => {
   return (
     <>
     <PitchSection>
-        <DestinationH1>{name}</DestinationH1>
-        <p>{description}</p>
+        <DestinationH1>{destination.name}</DestinationH1>
+        <p>{destination.description}</p>
       </PitchSection>
       <DestinationInfo>
         <div>
           <Subheading2>Avg. distance</Subheading2>
-          <Subheading1>{distance}</Subheading1>
+          <Subheading1>{destination.distance}</Subheading1>
         </div>
         <div>
           <Subheading2>Est. travel time</Subheading2>
-          <Subheading1>{travel}</Subheading1>
+          <Subheading1>{destination.travel}</Subheading1>
         </div>
       </DestinationInfo>
       </>
