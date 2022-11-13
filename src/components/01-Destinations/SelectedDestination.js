@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import { Subheading1, Subheading2, DestinationH1 } from "../ReusableStyles";
 
 const SelectedDestination = ({ destination }) => {

@@ -92,6 +92,7 @@ export const InnerWrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
   
   @media (min-width: 600px) {
     height: 80vh;
@@ -127,6 +128,6 @@ export const DestinationImg = styled.img`
 `
 
 export const CrewImage = styled.img`
-  width: 10rem;
+  height: 14.5rem;
   margin-top: 2rem;
 `
