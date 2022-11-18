@@ -1,10 +1,14 @@
-## Mobile
+## Over-all
 
-Lägg blur på bakgrundsbilden eller lägg till nåt overlay för att macha designen
+Fixa till typsnitt importera Bellefair Regular istf bara Bellefair
+Se över teckenstorlek
+
+## Mobile
 
 ## TABLET
 
-Fixa underline så att home inte alltid är active i nav
-
-fixa destination-sidorna. bakgrundsbild behöver bytas, funktionalitet för underline för aktiv sida.
-detta kan göra med conditional style beroende av destination.name
+Alla har uppdaterad bakgrund i media query
+Home ✅
+Destinations
+Crew
+Tech

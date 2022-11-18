@@ -28,7 +28,7 @@ const Header = () => {
           </Hamburger> }
         <NavLinkWrapper style={navMenuActive? {display:'flex'} : {display:'none'} }>
           <NavLinks>
-            <NavLink to="/"><NavText> <span>00</span> Home</NavText></NavLink>
+            <NavLink to="/" end><NavText> <span>00</span> Home</NavText></NavLink>
             <NavLink to="/destination"><NavText> <span>01</span> Destination</NavText></NavLink>
             <NavLink to="/crew"><NavText> <span>02</span> Crew</NavText></NavLink>
             <NavLink to="/technology"><NavText> <span>03</span> Technology</NavText></NavLink>

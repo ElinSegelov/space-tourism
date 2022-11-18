@@ -4,10 +4,11 @@ import styled from "styled-components/macro";
 import {
   InnerWrapper,
   OuterWrapper,
-  MidPageNav,
   FirstPageHeading} from "../ReusableStyles";
 import Header from "../Header";
-import techBackground from '../../assets/technology/background-technology-mobile.jpg';
+import techBackgroundMobile from '../../assets/technology/background-technology-mobile.jpg';
+import techBackgroundTablet from '../../assets/technology/background-technology-tablet.jpg';
+import techBackgroundDesktop from '../../assets/technology/background-technology-desktop.jpg';
 import data from '../../data';
 import SelectedTech from "./SelectedTech";
 
@@ -30,9 +31,36 @@ const Tech = () => {
 
       <SubSection>
         <DotContainer>
-          <Dot type="button" value="Launch vehicle" onClick={(e) => selectDestination(e.target.value)}>1</Dot>
-          <Dot type="button" value="Spaceport" onClick={(e) => selectDestination(e.target.value)}>2</Dot>
-          <Dot type="button" value="Space capsule" onClick={(e) => selectDestination(e.target.value)}>3</Dot>
+          <Dot
+            type="button"
+            value="Launch vehicle"
+            onClick={(e) => selectDestination(e.target.value)}
+            style={{ 
+              backgroundColor: choice.name === "Launch vehicle" ? "#FFFFFF" : "transparent",
+              color: choice.name === "Launch vehicle" ? "#0B0D17" : "#FFFFFF"
+            }}>
+              1
+          </Dot>
+          <Dot
+            type="button"
+            value="Spaceport"
+            onClick={(e) => selectDestination(e.target.value)}
+            style={{ 
+              backgroundColor: choice.name === "Spaceport" ? "#FFFFFF" : "transparent",
+              color: choice.name === "Spaceport" ? "#0B0D17" : "#FFFFFF"
+            }}>
+              2
+          </Dot>
+          <Dot
+            type="button"
+            value="Space capsule"
+            onClick={(e) => selectDestination(e.target.value)}
+            style={{ 
+              backgroundColor: choice.name === "Space capsule" ? "#FFFFFF" : "transparent",
+              color: choice.name === "Space capsule" ? "#0B0D17" : "#FFFFFF"
+            }}>
+            3
+          </Dot>
         </DotContainer>
       </SubSection>
       <SelectedTech tech={choice} /> 
@@ -43,8 +71,13 @@ const Tech = () => {
 export default Tech;
 
 const DestinationOuterWrapper = styled(OuterWrapper)`
- background-image: url(${techBackground});
-
+ background-image: url(${techBackgroundMobile});
+ @media (min-width: 600px) {
+    background-image: url(${techBackgroundTablet});
+  }
+ @media (min-width: 1024px) {
+    background-image: url(${techBackgroundDesktop});
+  }
 `
 const SubSection = styled.div`
   padding: 0 1.5rem;
@@ -55,7 +88,6 @@ const TechImage = styled.img`
   margin: 2rem 0;
 
 `
-
 const DotContainer = styled.div`
   display: flex;
   width: 40vw;
