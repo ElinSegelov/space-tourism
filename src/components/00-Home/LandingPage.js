@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
-import { InnerWrapper, OuterWrapper, H2, FirstPageHeading } from "../ReusableStyles";
+import { InnerWrapper, OuterWrapper, FirstPageHeading } from "../ReusableStyles";
 import Header from "../Header";
 import homeBackGroundMobile from '../../assets/home/background-home-mobile.jpg'
 import homeBackGroundTablet from '../../assets/home/background-home-tablet.jpg'
