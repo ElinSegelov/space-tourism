@@ -25,17 +25,19 @@ const Destinations = () => {
     <DestinationOuterWrapper>
       <Header />
       <InnerWrapper>
-      <FirstPageHeading><span>01</span> Pick your destination</FirstPageHeading>
-      <DestinationImg src={choice.images.webp} alt={choice.name} /> 
-      <MidPageNav>
-        <ul>
-          <li><DestinationButton value="Moon" onClick={(e) => selectDestination(e.target.value)} style={{ borderBottom: choice.name === "Moon" ? "3px solid white" : "none" }} >Moon</DestinationButton></li>
-          <li><DestinationButton value="Mars" onClick={(e) => selectDestination(e.target.value)} style={{ borderBottom: choice.name === "Mars" ? "3px solid white" : "none" }} >Mars</DestinationButton></li>
-          <li><DestinationButton value="Europa" onClick={(e) => selectDestination(e.target.value)} style={{ borderBottom: choice.name === "Europa" ? "3px solid white" : "none" }} >Europa</DestinationButton></li>
-          <li><DestinationButton value="Titan" onClick={(e) => selectDestination(e.target.value)} style={{ borderBottom: choice.name === "Titan" ? "3px solid white" : "none" }} >Titan</DestinationButton></li>
-        </ul>
-      </MidPageNav>
-      <SelectedDestination destination={choice} />
+        <FirstPageHeading><span>01</span> Pick your destination</FirstPageHeading>
+        <DestinationImg src={choice.images.webp} alt={choice.name} /> 
+        <NavAndInfo>
+          <MidPageNav>
+            <ul>
+              <li><DestinationButton value="Moon" onClick={(e) => selectDestination(e.target.value)} style={{ borderBottom: choice.name === "Moon" ? "3px solid white" : "none" }} >Moon</DestinationButton></li>
+              <li><DestinationButton value="Mars" onClick={(e) => selectDestination(e.target.value)} style={{ borderBottom: choice.name === "Mars" ? "3px solid white" : "none" }} >Mars</DestinationButton></li>
+              <li><DestinationButton value="Europa" onClick={(e) => selectDestination(e.target.value)} style={{ borderBottom: choice.name === "Europa" ? "3px solid white" : "none" }} >Europa</DestinationButton></li>
+              <li><DestinationButton value="Titan" onClick={(e) => selectDestination(e.target.value)} style={{ borderBottom: choice.name === "Titan" ? "3px solid white" : "none" }} >Titan</DestinationButton></li>
+            </ul>
+          </MidPageNav>
+          <SelectedDestination destination={choice} />
+        </NavAndInfo>
       </InnerWrapper>
     </DestinationOuterWrapper>
   )
@@ -52,8 +54,17 @@ const DestinationOuterWrapper = styled(OuterWrapper)`
     background-image: url(${destinationBackgroundDesktop});
   }
 
-
 `
 const DestinationButton = styled.button`
   padding-bottom: 0.6rem;
+`
+
+const NavAndInfo = styled.div`
+   @media (min-width: 1024px) {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 28rem;
+  }
 `

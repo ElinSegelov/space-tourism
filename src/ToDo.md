@@ -7,8 +7,8 @@ Se över teckenstorlek
 
 ## TABLET
 
-Alla har uppdaterad bakgrund i media query
-Home ✅
-Destinations
+## DESKTOP
+
+Landing page - fixa så att texten är på rätt ställe.
 Crew
 Tech

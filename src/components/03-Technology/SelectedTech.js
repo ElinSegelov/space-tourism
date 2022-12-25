@@ -6,15 +6,27 @@ const SelectedTech = ({ tech }) => {
 
   return (
     <section>
-      <Heading4>The terminolgy...</Heading4>
-      <TechName>{tech.name}</TechName>
-      <p>{tech.description}</p>
+      <TechHeading4>The terminolgy...</TechHeading4>
+      <Subheading1>{tech.name}</Subheading1>
+      <TechDescriptionP>{tech.description}</TechDescriptionP>
     </section>
   )
 }
 
 export default SelectedTech;
 
-const TechName = styled(Subheading1)`
-  margin-bottom: 2rem;
+const TechDescriptionP = styled.p`
+  @media (min-width: 600px) {
+    width: 30rem;
+    
+  }
+  `
+
+const TechHeading4 = styled(Heading4)`
+  @media (min-width: 600px) {
+    font-size: 16px;
+    color: var( --primary-text);
+    opacity: 100;
+  }
+
 `

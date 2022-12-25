@@ -49,6 +49,13 @@ const Logo = styled.img`
     width: 3rem;
     height: 3rem;
   }
+  @media (min-width: 1024px) {
+    //margin: 4.7rem 0 0 2rem;
+    position: absolute;
+    left: 2rem;
+    top: 4.5rem;
+    
+  }
 `
 
 const StyledHeader = styled.header`
@@ -73,11 +80,16 @@ const NavLinkWrapper = styled.nav`
     height: 6rem;
     background-color: var(--bg-nav);
     backdrop-filter: none;
-    display: flex !important;;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     width: 55vw;
-    
+  }
+
+  @media (min-width: 1024px) {
+    backdrop-filter: blur(80px);
+    background-color: transparent;
+    top: 2rem;
   }
 `
 const NavLinks = styled.ul`
@@ -90,10 +102,15 @@ const NavLinks = styled.ul`
 
   @media (min-width: 600px) {
     flex-direction: row;
+    gap:0.5rem;
     position: static;
     margin: 0;
     justify-content: space-around;
     width: 80%;
+  }
+  @media (min-width: 1024px) {
+   
+    
   }
 `
 
@@ -114,8 +131,14 @@ const Hamburger = styled.div`
 const Line = styled.span`
   display: none;
 
-  @media (min-width:600px) {
-    border-bottom: 2px solid var(--secondary-text);
-    width: 50%
+  @media (min-width: 1024px) {
+    border-bottom: 1px solid #979797;
+    width: 35%;
+    display: inline;
+    position: absolute;
+    left: 12%;
+    top: 5rem;
+    z-index: 2;
+    background-color: #979797;
   }
 `

@@ -86,13 +86,21 @@ const SubSection = styled.div`
 const TechImage = styled.img`
   width: 100vw;
   margin: 2rem 0;
-
+  
+  @media (min-width: 600px) {
+    margin: 4rem 0;
+    
+  }
 `
 const DotContainer = styled.div`
   display: flex;
   width: 40vw;
   justify-content: space-around;
-  margin: 0 auto 2rem;
+  margin: 4rem auto;
+  
+  @media (min-width: 600px) {
+    background-image: url(${techBackgroundTablet});
+  }
   
 `
 const Dot = styled.button`
@@ -102,4 +110,11 @@ const Dot = styled.button`
   background-color: transparent;
   border: 1px solid var(--primary-text);
   color: #FFF;
+  font-family: 'Bellefair', serif;
+  
+  @media (min-width: 600px) {
+    width: 4rem;
+    height: 4rem;
+    font-size: 24px;
+  }
 `

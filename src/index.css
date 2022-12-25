@@ -29,6 +29,7 @@ h1 {
 	font-size: 80px;
 	text-transform: uppercase;
 	margin: 2rem auto 3rem;
+	font-weight: 500;
 }
 
 h2 {
@@ -59,11 +60,18 @@ p {
 	color: var(--primary-text);
 	font-size: 16px;
 	line-height: 25px;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
+	font-weight: 300;
 }
 
 @media(min-width: 600px) {
 	.active {
 		border-bottom: 3px solid white;
+	}
+}
+
+@media(min-width: 1024px) {
+	p {
+		font-size: 18px;
 	}
 }

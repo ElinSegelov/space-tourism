@@ -4,6 +4,7 @@ import { InnerWrapper, OuterWrapper, FirstPageHeading } from "../ReusableStyles"
 import Header from "../Header";
 import homeBackGroundMobile from '../../assets/home/background-home-mobile.jpg'
 import homeBackGroundTablet from '../../assets/home/background-home-tablet.jpg'
+import homeBackGroundDesktop from '../../assets/home/background-home-desktop.jpg'
 import { Link } from "react-router-dom";
 
 
@@ -12,9 +13,9 @@ const LandingPage = () => {
     <HomeOuterWrapper>
       <Header />
       <HomeInnerWrapper>
+        <TextContainer>
         <HomeH2>So, you want to travel to</HomeH2>
         <HomeH1>Space</HomeH1>
-        <TextContainer>
           <p>Let’s face it; if you want to go to space, you might as well genuinely go to 
             outer space and not hover kind of on the edge of it. Well sit back, and relax 
             because we’ll give you a truly out of this world experience!
@@ -40,10 +41,18 @@ export default LandingPage;
   @media (min-width: 600px) {
     background-image: url(${homeBackGroundTablet});
   }
+  
+  @media (min-width: 1024px) {
+    background-image: url(${homeBackGroundDesktop});
+  }
 ` 
 const HomeInnerWrapper = styled(InnerWrapper)`
   @media (min-width: 600px) {
     margin-top: 4.5rem;
+  }
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: center;
   }
 `
 const HomeH2 = styled(FirstPageHeading)`
@@ -52,7 +61,12 @@ const HomeH2 = styled(FirstPageHeading)`
   @media (min-width: 600px) {
     font-size: 20px;
     letter-spacing: 3.38px;
+    position: static;
    }
+   @media (min-width: 1024px) {
+    font-size: 24px;
+    letter-spacing: 6px;
+  }
 `
 
 const HomeH1 = styled.h1`
@@ -70,6 +84,11 @@ const TextContainer = styled.div`
       line-height: 28px;
     }
   }
+  @media (min-width: 1024px) {
+    text-align: left;
+    position: absolute;
+    left: 12%;
+  }
 `
 
 const ExploreBubble = styled.div`
@@ -80,18 +99,10 @@ const ExploreBubble = styled.div`
   justify-content: center;
   align-items: center;
   display: flex;
-  margin: 0 auto;
   position: absolute;
   bottom: 6vh;
-  left: 0;
-  right: 0;
+  right: calc(50% - 75px);
   
-  @media (min-width: 600px) {
-    bottom: 8vh;
-
-  }
-  
-
   p {
     color: black;
     text-transform: uppercase;
@@ -101,8 +112,10 @@ const ExploreBubble = styled.div`
   }
   
   @media (min-width: 600px) {
-    height: 242px;
-    width: 242px;
+    bottom: 6vh;
+    height: 15rem;
+    width: 15rem;
+    right: calc(50% - 7.5rem);
     
     p {
     letter-spacing: 2px;
@@ -110,4 +123,10 @@ const ExploreBubble = styled.div`
     }
   }
 
+  @media (min-width: 1024px) {
+    height: 17rem;
+    width: 17rem;
+    right: 10%;
+    bottom: 10vh
+  }
 `

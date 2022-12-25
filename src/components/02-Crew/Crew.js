@@ -12,15 +12,15 @@ import crewBackgroundDesktop from '../../assets/crew/background-crew-desktop.jpg
 import SelectedCrewMember from "./SelectedCrewMember";
 
 const Crew = () => {
-return(
-  <CrewOuterWrapper>
-        <Header />
-        <InnerWrapper>
+  return(
+    <CrewOuterWrapper>
+      <Header />
+      <InnerWrapper>
         <FirstPageHeading><span>02</span> Meet your crew</FirstPageHeading>
         <SelectedCrewMember />
-        </InnerWrapper>
-      </CrewOuterWrapper>
-    )
+      </InnerWrapper>
+    </CrewOuterWrapper>
+  )
 }
 
 export default Crew;

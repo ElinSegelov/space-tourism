@@ -4,7 +4,7 @@ import { Subheading1, Subheading2, DestinationH1 } from "../ReusableStyles";
 
 const SelectedDestination = ({ destination }) => {
   return (
-    <>
+    <InfoWrapper>
     <PitchSection>
         <DestinationH1>{destination.name}</DestinationH1>
         <p>{destination.description}</p>
@@ -19,12 +19,18 @@ const SelectedDestination = ({ destination }) => {
           <Subheading1>{destination.travel}</Subheading1>
         </div>
       </DestinationInfo>
-      </>
+      </InfoWrapper>
   )
 }
 
 export default SelectedDestination;
 
+const InfoWrapper = styled.div`
+  @media (min-width: 1024px) {
+   //width: 80%
+    
+  }
+`
 
 const PitchSection = styled.section`
   margin-bottom: 2rem;
@@ -32,9 +38,19 @@ const PitchSection = styled.section`
 const DestinationInfo = styled.section`
   border-top: 1px solid var(--primary-text);
   width: 95%;
-  padding-top: 3rem;
+  padding: 3rem 0;
   display: flex;
   flex-direction: column;
   gap: 3rem;
 
+  @media (min-width:600px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  @media (min-width: 1024px) {
+    width: 100%;
+    padding-bottom: 0;
+    //justify-content: space-around;
+    
+  }
 `

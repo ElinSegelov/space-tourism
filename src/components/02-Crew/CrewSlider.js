@@ -58,11 +58,15 @@ export default CrewSlider;
 
 const Carousel = styled.div`
   overflow: hidden;
-`
+  `
 
 const Inner = styled.div`
   white-space: nowrap;
   transition: transform 0.3s;
+  
+  @media (min-width: 600px) {
+    
+  }
 `
 
 const ImageWrapper = styled.div`
@@ -71,6 +75,10 @@ const ImageWrapper = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: 600px) {
+    border: none;
+  }
 `
 
 const Indicators = styled.div`
@@ -78,6 +86,13 @@ const Indicators = styled.div`
   width: 27vw;
   justify-content: space-around;
   margin: 2rem auto;
+  
+  @media (min-width: 600px) {
+    position: absolute;
+    width: 7rem;
+    top: 30%;
+    left: 41%;
+  }
 `
 
 const Dot = styled.button`
