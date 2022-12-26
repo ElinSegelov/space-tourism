@@ -9,6 +9,5 @@ Se över teckenstorlek
 
 ## DESKTOP
 
-Landing page - fixa så att texten är på rätt ställe.
 Crew
 Tech

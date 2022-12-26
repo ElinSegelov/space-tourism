@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+<div align="center">
+      <h1> <img src="https://segelov-space-tourism.netlify.app/" width="80px"><br/>Space Tourism</h1>
+     </div>
+<p align="center"> <a href="https://segelov-space-tourism.netlify.app/" target="_blank"><img alt="" src="https://img.shields.io/badge/Website-EA4C89?style=normal&logo=dribbble&logoColor=white" style="vertical-align:center" /></a> <a href="https://www.linkedin.com/in/elin-s-683a867a/}" target="_blank"><img alt="" src="https://img.shields.io/badge/LinkedIn-0077B5?style=normal&logo=linkedin&logoColor=white" style="vertical-align:center" /></a> </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Description
 
-## Available Scripts
+This is a web page for a fictional space tourism company. It is a challenge from Frontend Mentor and they provided the design. The page is created using React and Styled Components.
 
-In the project directory, you can run:
+# Features
 
-### `npm start`
+Site is responsive and has different designs for mobile, tablet and desktop.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Screenshots
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ <img src="https://segelov-space-tourism.netlify.app/">
+# Tech Used
+ ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+      
+# Add More Details:
+Anything else that you want to add for users? You can write it here in markdown and see preview in real time. You can add anything that you want, for example
 
-### `npm test`
+### You can add How to Setup:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Step 1: this is step 1
+- Step 2: do this, do that
 
-### `npm run build`
+### You can add API references
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Syntax        | Description                                                                                                   |
+| ------------- | ------------------------------------------------------------------------------------------------------------- |
+| AndroidX      | Refactored versions of the Android APIs that are not bundled with the operating system.                       |
+| AndroidX Test | Includes APIs for testing your Android app, including Espresso, JUnit Runner, JUnit4 rules, and UI Automator. |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### You can add
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Links](https://itsvg.in)
 
-### `npm run eject`
+![](https://img.shields.io/badge/IMAGES-4298B8.svg?style=for-the-badge&logoColor=white)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# If you don't want to add this section, just clear all the text written here.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- </> with 💛 by readMD (https://readmd.itsvg.in) -->

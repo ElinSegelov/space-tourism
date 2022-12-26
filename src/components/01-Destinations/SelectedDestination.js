@@ -50,7 +50,8 @@ const DestinationInfo = styled.section`
   @media (min-width: 1024px) {
     width: 100%;
     padding-bottom: 0;
-    //justify-content: space-around;
+    justify-content: left;
+    gap: 5rem;
     
   }
 `

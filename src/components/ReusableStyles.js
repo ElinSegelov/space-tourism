@@ -9,6 +9,10 @@ export const DestinationH1 = styled.h1`
   font-size: 56px;
   margin: 2.5rem 0 2rem;
 
+  @media (min-width: 1024px) {
+    font-size: 100px;
+  }
+
 `
 export const H2 = styled.h2`
   @media (min-width: 600px) {
@@ -144,7 +148,7 @@ export const InnerWrapper = styled.main`
   @media (min-width: 1024px) {
     flex-direction: row;
     justify-content:space-around;
-    align-items: center;
+    //align-items: center;
     text-align: left;
     width: 100%;
   }
@@ -179,7 +183,7 @@ export const InnerWrapper = styled.main`
       }
 
       li button {
-        margin-right: 1rem;
+        margin-right: 2rem;
       }
   }
   `
