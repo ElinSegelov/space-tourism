@@ -12,11 +12,11 @@ const SelectedDestination = ({ destination }) => {
       <DestinationInfo>
         <div>
           <Subheading2>Avg. distance</Subheading2>
-          <Subheading1>{destination.distance}</Subheading1>
+          <DistanceInfo>{destination.distance}</DistanceInfo>
         </div>
         <div>
           <Subheading2>Est. travel time</Subheading2>
-          <Subheading1>{destination.travel}</Subheading1>
+          <DistanceInfo>{destination.travel}</DistanceInfo>
         </div>
       </DestinationInfo>
       </InfoWrapper>
@@ -25,8 +25,15 @@ const SelectedDestination = ({ destination }) => {
 
 export default SelectedDestination;
 
+const DistanceInfo = styled(Subheading1)`
+  @media (min-width: 1200px) {
+   font-size: 28px;
+    
+  }
+`
+
 const InfoWrapper = styled.div`
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
    //width: 80%
     
   }
@@ -47,7 +54,7 @@ const DestinationInfo = styled.section`
     flex-direction: row;
     justify-content: space-around;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     width: 100%;
     padding-bottom: 0;
     justify-content: left;

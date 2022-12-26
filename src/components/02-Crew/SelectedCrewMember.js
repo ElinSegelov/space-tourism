@@ -13,7 +13,7 @@ const SelectedCrewMember = () => {
       <CrewSlider crew={crew} activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
       <InfoWrapper>
         <CrewTitle>{crew[activeIndex].role}</CrewTitle>
-        <Subheading1>{crew[activeIndex].name}</Subheading1>
+        <CrewName>{crew[activeIndex].name}</CrewName>
         <CrewBio>{crew[activeIndex].bio}</CrewBio>
       </InfoWrapper>
     </CrewInfoSection>
@@ -23,24 +23,12 @@ const SelectedCrewMember = () => {
 
 export default SelectedCrewMember;
 
-const InfoWrapper = styled.div`
-  @media (min-width: 600px) {
-    margin: 2rem auto 0;
-    width: 33rem;
-  }
-  `
-const CrewBio = styled.p`
-  font-weight: 300;
-  @media (min-width: 600px) {
-    margin: 3rem auto 0; 
-  }
-`
-const CrewTitle = styled(Heading4)`
-  opacity: 50%;
-`
+
 const CrewInfoSection = styled.section`
   width: 100%;
   padding-bottom: 1.5rem;
+  overflow: hidden;
+
   
   @media (min-width: 600px) {
     display: flex;
@@ -50,4 +38,47 @@ const CrewInfoSection = styled.section`
     padding-bottom: 0;
     margin-top: 3rem;
   }
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
 `
+const InfoWrapper = styled.div`
+  @media (min-width: 600px) {
+    margin: 2rem auto 0;
+    width: 33rem;
+    position: relative;
+  }
+
+  @media (min-width: 1200px) {
+    width: 28rem;
+    display: flex;
+    flex-direction: column;
+    bottom: 5rem;
+    margin: 0;
+    position: static;
+  }
+`
+
+const CrewBio = styled.p`
+  font-weight: 300;
+  @media (min-width: 600px) {
+    line-height: 28px;
+  }
+  @media (min-width: 1200px) {
+    line-height: 32px;
+  }
+`
+const CrewTitle = styled(Heading4)`
+  opacity: 50%;
+`
+
+const CrewName = styled(Subheading1)`
+  @media (min-width: 1200px) {
+  width: 40rem;
+  font-weight: 300; 
+  }
+`
+  //kolla så att det här faktiskt är fontweight 300

@@ -50,7 +50,7 @@ const DestinationOuterWrapper = styled(OuterWrapper)`
  @media (min-width: 600px) {
     background-image: url(${destinationBackgroundTablet});
   }
- @media (min-width: 1024px) {
+ @media (min-width: 1200px) {
     background-image: url(${destinationBackgroundDesktop});
   }
 
@@ -60,7 +60,7 @@ const DestinationButton = styled.button`
 `
 
 const NavAndInfo = styled.div`
-   @media (min-width: 1024px) {
+   @media (min-width: 1200px) {
     width: 40%;
     display: flex;
     flex-direction: column;

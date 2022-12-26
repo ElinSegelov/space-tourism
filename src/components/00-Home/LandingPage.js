@@ -42,7 +42,7 @@ export default LandingPage;
     background-image: url(${homeBackGroundTablet});
   }
   
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     background-image: url(${homeBackGroundDesktop});
   }
 ` 
@@ -50,7 +50,7 @@ const HomeInnerWrapper = styled(InnerWrapper)`
   @media (min-width: 600px) {
     margin-top: 4.5rem;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     flex-direction: row;
     justify-content: center;
   }
@@ -63,7 +63,7 @@ const HomeH2 = styled(FirstPageHeading)`
     letter-spacing: 3.38px;
     position: static;
    }
-   @media (min-width: 1024px) {
+   @media (min-width: 1200px) {
     font-size: 24px;
     letter-spacing: 6px;
   }
@@ -84,7 +84,7 @@ const TextContainer = styled.div`
       line-height: 28px;
     }
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     text-align: left;
     position: absolute;
     left: 12%;
@@ -123,7 +123,7 @@ const ExploreBubble = styled.div`
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     height: 17rem;
     width: 17rem;
     right: 10%;

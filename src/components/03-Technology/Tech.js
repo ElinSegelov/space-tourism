@@ -11,23 +11,34 @@ import techBackgroundTablet from '../../assets/technology/background-technology-
 import techBackgroundDesktop from '../../assets/technology/background-technology-desktop.jpg';
 import data from '../../data';
 import SelectedTech from "./SelectedTech";
+import { useEffect } from "react";
 
 const Tech = () => {
   const techData = data.technology
   const [choice, setChoice] = useState(techData[0])
+  const [isDesktop, setDesktop] = useState(window.innerWidth >= 1200)
 
-  
+  const updateMedia = () => {
+    setDesktop(window.innerWidth >= 1200)
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia)
+    return () => window.removeEventListener("resize", updateMedia)
+  }, [])
+
   const selectDestination = (value) => {
     setChoice(techData.find((tech) => tech.name === value))
   }
-
   return (
     <DestinationOuterWrapper>
       <Header />
-      <InnerWrapper>
+      <TechInnerWrapper>
       <FirstPageHeading><span>03</span> Space launch 101</FirstPageHeading>
-      {/* Här behöver jag rendera landscape eller portrait beroende på screen width */}
-      <TechImage src={choice.images.landscape} alt={choice.name} />
+
+      <TechImage 
+        src={isDesktop ? choice.images.portrait : choice.images.landscape}
+        alt={choice.name} />
 
       <SubSection>
         <DotContainer>
@@ -64,7 +75,7 @@ const Tech = () => {
         </DotContainer>
       </SubSection>
       <SelectedTech tech={choice} /> 
-      </InnerWrapper>
+      </TechInnerWrapper>
     </DestinationOuterWrapper>
   )
 }
@@ -75,12 +86,23 @@ const DestinationOuterWrapper = styled(OuterWrapper)`
  @media (min-width: 600px) {
     background-image: url(${techBackgroundTablet});
   }
- @media (min-width: 1024px) {
+ @media (min-width: 1200px) {
     background-image: url(${techBackgroundDesktop});
   }
 `
+const TechInnerWrapper = styled(InnerWrapper)`
+  @media (min-width: 1200px) {
+    position: relative;
+    justify-content: left;
+  }
+
+`
+
 const SubSection = styled.div`
   padding: 0 1.5rem;
+  @media (min-width: 1200px) {
+    padding: 0;
+  }
 `
 
 const TechImage = styled.img`
@@ -89,17 +111,28 @@ const TechImage = styled.img`
   
   @media (min-width: 600px) {
     margin: 4rem 0;
-    
+  }
+
+  @media (min-width: 1200px) {
+    position: absolute;
+    right: 0;
+    width: 28rem;
   }
 `
 const DotContainer = styled.div`
   display: flex;
   width: 40vw;
   justify-content: space-around;
-  margin: 4rem auto;
+  margin: 0 auto 2rem;
   
   @media (min-width: 600px) {
-    background-image: url(${techBackgroundTablet});
+    margin-bottom: 3rem;
+  }
+  @media (min-width: 1200px) {
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 3rem 0 0;
+    gap: 2rem;
   }
   
 `
@@ -116,5 +149,8 @@ const Dot = styled.button`
     width: 4rem;
     height: 4rem;
     font-size: 24px;
+  }
+  @media (min-width: 1200px) {
+   
   }
 `

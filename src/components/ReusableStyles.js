@@ -9,7 +9,7 @@ export const DestinationH1 = styled.h1`
   font-size: 56px;
   margin: 2.5rem 0 2rem;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     font-size: 100px;
   }
 
@@ -33,7 +33,14 @@ export const Heading4 = styled.h3`
   @media (min-width: 600px) {
   font-size: 24px;
   opacity: 50%;
-}
+  }
+  @media (min-width: 1200px) {
+    font-size: 32px;
+    font-weight: 300;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2.7px;
+  
+  }
 `
 
 export const FirstPageHeading = styled.h2`
@@ -41,6 +48,7 @@ export const FirstPageHeading = styled.h2`
   font-weight: 400;
   letter-spacing: 2.7px;
 	font-family: 'Barlow Condensed', sans-serif;
+  
   span {
     color: #626262;
   }
@@ -52,17 +60,12 @@ export const FirstPageHeading = styled.h2`
     position: relative;
   }
   
-  @media (min-width: 600px) {
-    
-  }
-  
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     font-size: 28px;
     left: 12%;
     top: 5vh;
     position: absolute;
   }
-  
 `
 
 export const Subheading1 = styled.h4`
@@ -74,8 +77,12 @@ export const Subheading1 = styled.h4`
     margin-bottom: 2rem;
   }
 
-  @media (min-width: 1024px) {
-    font-size: 28px;
+  @media (min-width: 1200px) {
+    font-size: 54px;
+    display: inline;
+    width: 20rem;
+    font-weight: 300;
+    
   }
 `
 export const Subheading2 = styled.h3`
@@ -107,8 +114,7 @@ export const NavText = styled.li`
     display: none;
   }
   }
-  @media (min-width: 1024px) {
-    //width: 100%;
+  @media (min-width: 1200px) {
     span {
       display: inline;
       margin-right: 0;
@@ -145,12 +151,12 @@ export const InnerWrapper = styled.main`
     position: relative;
   }
   
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     flex-direction: row;
     justify-content:space-around;
-    //align-items: center;
     text-align: left;
     width: 100%;
+    padding: 1.5rem 0 0 12%;
   }
   `
 
@@ -175,7 +181,7 @@ export const InnerWrapper = styled.main`
       color: var(--secondaryText);
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1200px) {
       margin: 0;
 
       ul {
@@ -196,9 +202,9 @@ export const DestinationImg = styled.img`
     width: 20rem;
     margin: 4rem 0;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     width: 28rem;
-    margin: 0 0 0 10rem ;
+    margin: 0;
   }
 `
 

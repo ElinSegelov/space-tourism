@@ -58,15 +58,19 @@ export default CrewSlider;
 
 const Carousel = styled.div`
   overflow: hidden;
-  `
+
+  @media (min-width: 1200px) {
+    position: absolute;
+    bottom: 0;
+    left: -10%;
+  }
+`
 
 const Inner = styled.div`
   white-space: nowrap;
   transition: transform 0.3s;
-  
-  @media (min-width: 600px) {
-    
-  }
+
+
 `
 
 const ImageWrapper = styled.div`
@@ -75,6 +79,7 @@ const ImageWrapper = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  
 
   @media (min-width: 600px) {
     border: none;
@@ -83,23 +88,31 @@ const ImageWrapper = styled.div`
 
 const Indicators = styled.div`
   display: flex;
-  width: 27vw;
+  width: fit-content;
   justify-content: space-around;
   margin: 2rem auto;
   
   @media (min-width: 600px) {
     position: absolute;
-    width: 7rem;
     top: 30%;
-    left: 41%;
+    left: calc(50% - 50px);
+  }
+  @media (min-width: 1200px) {
+    top: 70%;
+    left: 5.5%;
   }
 `
 
 const Dot = styled.button`
   width: 0.6rem;
   height: 0.6rem;
-  border-radius: 5rem;
+  border-radius: 50%;
   background-color: var(--secondary-text);
   opacity: 0.2;
   margin: 0.5rem;
+  
+  @media (min-width: 1200px) {
+    width: 1rem;
+    height: 1rem;
+  }
 `

@@ -49,7 +49,7 @@ const Logo = styled.img`
     width: 3rem;
     height: 3rem;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     //margin: 4.7rem 0 0 2rem;
     position: absolute;
     left: 2rem;
@@ -86,7 +86,7 @@ const NavLinkWrapper = styled.nav`
     width: 55vw;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     backdrop-filter: blur(80px);
     background-color: transparent;
     top: 2rem;
@@ -108,7 +108,7 @@ const NavLinks = styled.ul`
     justify-content: space-around;
     width: 80%;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
    
     
   }
@@ -131,7 +131,7 @@ const Hamburger = styled.div`
 const Line = styled.span`
   display: none;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     border-bottom: 1px solid #979797;
     width: 35%;
     display: inline;
