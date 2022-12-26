@@ -99,7 +99,7 @@ const Indicators = styled.div`
   }
   @media (min-width: 1200px) {
     top: 70%;
-    left: 5.5%;
+    left: 7.5rem;
   }
 `
 
