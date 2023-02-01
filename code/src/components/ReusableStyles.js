@@ -1,10 +1,5 @@
 import styled from "styled-components/macro";
 
-export const H1 = styled.h1`
-  @media (min-width: 600px) {
-    font-size: 150px;
-  }
-`
 export const DestinationH1 = styled.h1`
   font-size: 56px;
   margin: 2.5rem 0 2rem;
@@ -12,34 +7,21 @@ export const DestinationH1 = styled.h1`
   @media (min-width: 1200px) {
     font-size: 100px;
   }
-
-`
-export const H2 = styled.h2`
-  @media (min-width: 600px) {
-    font-size: 100px;
-  }
-`
-export const H3 = styled.h3`
-  @media (min-width: 600px) {
-    font-size: 56px;
-  }
 `
 
 export const Heading4 = styled.h3`
   font-size: 16px;
-  font-family: 'Bellefair', serif;
   margin-bottom: 0.5rem;
+  font-weight: 300;
+  font-family: 'Barlow Condensed', sans-serif;
 
   @media (min-width: 600px) {
   font-size: 24px;
-  opacity: 50%;
+  opacity: 50% //det här borde gälla alla media queries?
   }
   @media (min-width: 1200px) {
     font-size: 32px;
-    font-weight: 300;
-    font-family: 'Barlow Condensed', sans-serif;
     letter-spacing: 2.7px;
-  
   }
 `
 
@@ -71,6 +53,7 @@ export const FirstPageHeading = styled.h2`
 export const Subheading1 = styled.h4`
   font-size: 28px;
   font-family: 'Bellefair', serif;
+  font-weight: 300;
 
   @media (min-width: 600px) {
     font-size: 40px;
@@ -81,8 +64,6 @@ export const Subheading1 = styled.h4`
     font-size: 54px;
     display: inline;
     width: 20rem;
-    font-weight: 300;
-    
   }
 `
 export const Subheading2 = styled.h3`
@@ -127,11 +108,10 @@ export const OuterWrapper = styled.div`
   height: 100vh;
   width: 100vw;
   background-size: 100% 100%;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-size: 100% 100%;
-  background-position: center;
 `
 
 export const InnerWrapper = styled.main`
@@ -148,17 +128,15 @@ export const InnerWrapper = styled.main`
     padding: 1.5rem 1.5rem 0;
     height: 90vh;
     width: 80vw;
-    position: relative;
   }
   
   @media (min-width: 1200px) {
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
     text-align: left;
     width: 100%;
     padding: 1.5rem 0 0 12%;
-  }
-  `
+  }`
 
   export const MidPageNav = styled.nav`
     width: 90%;
@@ -167,6 +145,7 @@ export const InnerWrapper = styled.main`
     @media (min-width: 600px) {
     width: 35vw;
     }
+    
     ul {
       display: flex;
       justify-content: space-between;

@@ -30,10 +30,38 @@ const Destinations = () => {
         <NavAndInfo>
           <MidPageNav>
             <ul>
-              <li><DestinationButton value="Moon" onClick={(e) => selectDestination(e.target.value)} style={{ borderBottom: choice.name === "Moon" ? "3px solid white" : "none" }} >Moon</DestinationButton></li>
-              <li><DestinationButton value="Mars" onClick={(e) => selectDestination(e.target.value)} style={{ borderBottom: choice.name === "Mars" ? "3px solid white" : "none" }} >Mars</DestinationButton></li>
-              <li><DestinationButton value="Europa" onClick={(e) => selectDestination(e.target.value)} style={{ borderBottom: choice.name === "Europa" ? "3px solid white" : "none" }} >Europa</DestinationButton></li>
-              <li><DestinationButton value="Titan" onClick={(e) => selectDestination(e.target.value)} style={{ borderBottom: choice.name === "Titan" ? "3px solid white" : "none" }} >Titan</DestinationButton></li>
+              <li>
+                <DestinationButton
+                  value="Moon"
+                  onClick={(e) => selectDestination(e.target.value)}
+                  style={{ borderBottom: choice.name === "Moon" ? "3px solid white" : "none" }} >
+                    Moon
+                </DestinationButton>
+              </li>
+              <li>
+                <DestinationButton
+                  value="Mars"
+                  onClick={(e) => selectDestination(e.target.value)}
+                  style={{ borderBottom: choice.name === "Mars" ? "3px solid white" : "none" }} >
+                    Mars
+                </DestinationButton>
+              </li>
+              <li>
+                <DestinationButton
+                  value="Europa"
+                  onClick={(e) => selectDestination(e.target.value)}
+                  style={{ borderBottom: choice.name === "Europa" ? "3px solid white" : "none" }} >
+                    Europa
+                </DestinationButton>
+              </li>
+              <li>
+                <DestinationButton
+                  value="Titan"
+                  onClick={(e) => selectDestination(e.target.value)}
+                  style={{ borderBottom: choice.name === "Titan" ? "3px solid white" : "none" }} >
+                    Titan
+                </DestinationButton>
+              </li>
             </ul>
           </MidPageNav>
           <SelectedDestination destination={choice} />

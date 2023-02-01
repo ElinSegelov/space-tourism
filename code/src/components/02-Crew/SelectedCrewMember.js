@@ -23,7 +23,6 @@ const SelectedCrewMember = () => {
 
 export default SelectedCrewMember;
 
-
 const CrewInfoSection = styled.section`
   width: 100%;
   padding-bottom: 1.5rem;
@@ -64,9 +63,11 @@ const InfoWrapper = styled.div`
 
 const CrewBio = styled.p`
   font-weight: 300;
+
   @media (min-width: 600px) {
     line-height: 28px;
   }
+  
   @media (min-width: 1200px) {
     line-height: 32px;
   }

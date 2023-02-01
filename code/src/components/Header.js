@@ -50,14 +50,12 @@ const Logo = styled.img`
     height: 3rem;
   }
   @media (min-width: 1200px) {
-    //margin: 4.7rem 0 0 2rem;
     position: absolute;
     left: 2rem;
     top: 4.5rem;
     
   }
 `
-
 const StyledHeader = styled.header`
   position: relative;
   width: 100vw;
@@ -88,7 +86,6 @@ const NavLinkWrapper = styled.nav`
 
   @media (min-width: 1200px) {
     backdrop-filter: blur(80px);
-    //background-color: transparent;
     top: 2rem;
     background-color: rgba(25, 27, 35, 0.5);
   }
@@ -108,10 +105,6 @@ const NavLinks = styled.ul`
     margin: 0;
     justify-content: space-around;
     width: 80%;
-  }
-  @media (min-width: 1200px) {
-   
-    
   }
 `
 

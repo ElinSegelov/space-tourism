@@ -28,14 +28,12 @@ export default SelectedDestination;
 const DistanceInfo = styled(Subheading1)`
   @media (min-width: 1200px) {
    font-size: 28px;
-    
   }
 `
 
 const InfoWrapper = styled.div`
   @media (min-width: 1200px) {
-   //width: 80%
-    
+
   }
 `
 
@@ -54,6 +52,7 @@ const DestinationInfo = styled.section`
     flex-direction: row;
     justify-content: space-around;
   }
+  
   @media (min-width: 1200px) {
     width: 100%;
     padding-bottom: 0;

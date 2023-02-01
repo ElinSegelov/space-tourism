@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, /* Navigate */ } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './components/00-Home/LandingPage';
 import Destinations from './components/01-Destinations/Destinations';
 import Crew from './components/02-Crew/Crew';

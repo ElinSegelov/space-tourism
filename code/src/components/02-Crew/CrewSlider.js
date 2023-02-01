@@ -70,8 +70,6 @@ const Carousel = styled.div`
 const Inner = styled.div`
   white-space: nowrap;
   transition: transform 0.3s;
-
-
 `
 
 const ImageWrapper = styled.div`
@@ -81,7 +79,6 @@ const ImageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   
-
   @media (min-width: 600px) {
     border: none;
   }
@@ -98,6 +95,7 @@ const Indicators = styled.div`
     top: 30%;
     left: calc(50% - 50px);
   }
+  
   @media (min-width: 1200px) {
     top: 80%;
     left: 11.5%;

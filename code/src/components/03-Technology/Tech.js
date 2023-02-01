@@ -83,10 +83,12 @@ export default Tech;
 
 const DestinationOuterWrapper = styled(OuterWrapper)`
  background-image: url(${techBackgroundMobile});
+
  @media (min-width: 600px) {
     background-image: url(${techBackgroundTablet});
   }
- @media (min-width: 1200px) {
+
+  @media (min-width: 1200px) {
     background-image: url(${techBackgroundDesktop});
   }
 `
@@ -95,11 +97,11 @@ const TechInnerWrapper = styled(InnerWrapper)`
     position: relative;
     justify-content: left;
   }
-
 `
 
 const SubSection = styled.div`
   padding: 0 1.5rem;
+
   @media (min-width: 1200px) {
     padding: 0;
   }
@@ -149,8 +151,5 @@ const Dot = styled.button`
     width: 4rem;
     height: 4rem;
     font-size: 24px;
-  }
-  @media (min-width: 1200px) {
-   
   }
 `
