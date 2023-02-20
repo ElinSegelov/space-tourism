@@ -27,10 +27,11 @@ export default Crew;
 
 const CrewOuterWrapper = styled(OuterWrapper)`
   background-image: linear-gradient(rgba(11,13,23, 0.7), rgba(11,13,23, 0.7)), url(${crewBackgroundMobile});
+  
   @media (min-width: 600px) {
     background-image: linear-gradient(rgba(11,13,23, 0.7), rgba(11,13,23, 0.7)), url(${crewBackgroundTablet});
   }
   @media (min-width: 1200px) {
     background-image: linear-gradient(rgba(11,13,23, 0.7), rgba(11,13,23, 0.7)), url(${crewBackgroundDesktop});
   }
-  `
+`

@@ -11,7 +11,7 @@ import techBackgroundDesktop from '../../assets/technology/background-technology
 import data from '../../data';
 import SelectedTech from "./SelectedTech";
 import { useEffect } from "react";
-import DotButton from "./Dot";
+import TechDotButton from "./TechDotButton";
 
 const Tech = () => {
   const techData = data.technology
@@ -42,9 +42,9 @@ const Tech = () => {
 
       <SubSection>
         <DotContainer>
-          <DotButton choice={choice.name} selectTechnology={selectTechnology} technology={"Launch vehicle"} number="1" />
-          <DotButton choice={choice.name} selectTechnology={selectTechnology} technology="Spaceport" number="2" />
-          <DotButton choice={choice.name} selectTechnology={selectTechnology} technology="Space capsule" number="3" />
+          <TechDotButton choice={choice.name} selectTechnology={selectTechnology} technology={"Launch vehicle"} number="1" />
+          <TechDotButton choice={choice.name} selectTechnology={selectTechnology} technology="Spaceport" number="2" />
+          <TechDotButton choice={choice.name} selectTechnology={selectTechnology} technology="Space capsule" number="3" />
         </DotContainer>
       </SubSection>
       <SelectedTech tech={choice} /> 
@@ -91,7 +91,7 @@ const TechImage = styled.img`
   @media (min-width: 1200px) {
     position: absolute;
     right: 0;
-    width: 28rem;
+    width: 30rem;
   }
 `
 const DotContainer = styled.div`

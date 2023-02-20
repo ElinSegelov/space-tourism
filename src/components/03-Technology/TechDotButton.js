@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components/macro';
 
-const DotButton = ({ choice, selectTechnology, technology, number }) => {
-
+const TechDotButton = ({ choice, selectTechnology, technology, number }) => {
   return (
-    <Dot
+    <DotButton
       type="button"
       value={technology}
       onClick={(e) => selectTechnology(e.target.value)}
@@ -13,13 +12,13 @@ const DotButton = ({ choice, selectTechnology, technology, number }) => {
         color: choice === technology ? "#0B0D17" : "#FFFFFF"
       }}>
         {number}
-    </Dot>
+    </DotButton>
   )
 }
 
-export default DotButton;
+export default TechDotButton;
 
-const Dot = styled.button`
+const DotButton = styled.button`
   width: 2rem;
   height: 2rem;
   border-radius: 5rem;
@@ -34,4 +33,11 @@ const Dot = styled.button`
     height: 4rem;
     font-size: 24px;
   }
+
+  @media (min-width: 1200px) {
+    &&:hover {
+		  border: 2px solid #FFF;
+	  }
+  }
+
 `

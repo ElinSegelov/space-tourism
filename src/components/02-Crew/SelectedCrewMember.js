@@ -17,7 +17,6 @@ const SelectedCrewMember = () => {
         <CrewBio>{crew[activeIndex].bio}</CrewBio>
       </InfoWrapper>
     </CrewInfoSection>
-
   )
 }
 
@@ -27,7 +26,6 @@ const CrewInfoSection = styled.section`
   width: 100%;
   padding-bottom: 1.5rem;
   overflow: hidden;
-
   
   @media (min-width: 600px) {
     display: flex;
@@ -44,6 +42,7 @@ const CrewInfoSection = styled.section`
     position: relative;
   }
 `
+
 const InfoWrapper = styled.div`
   @media (min-width: 600px) {
     margin: 2rem auto 0;
@@ -72,6 +71,7 @@ const CrewBio = styled.p`
     line-height: 32px;
   }
 `
+
 const CrewTitle = styled(Heading4)`
   opacity: 50%;
 `
@@ -79,7 +79,5 @@ const CrewTitle = styled(Heading4)`
 const CrewName = styled(Subheading1)`
   @media (min-width: 1200px) {
   width: 40rem;
-  font-weight: 300; 
   }
 `
-  //kolla så att det här faktiskt är fontweight 300

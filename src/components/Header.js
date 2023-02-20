@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <Link to="/"><Logo src={logo} alt="home logo" /></Link>
-      <Line></Line>
+      <Line />
          { !navMenuActive ?
           <Hamburger onClick={showNavLinks}>
             <img src={hamburger} alt="Open navmenu" />
@@ -28,10 +28,10 @@ const Header = () => {
           </Hamburger> }
         <NavLinkWrapper style={navMenuActive? {display:'flex'} : {display:'none'} }>
           <NavLinks>
-            <NavLink to="/" end><NavText> <span>00</span> Home</NavText></NavLink>
-            <NavLink to="/destination"><NavText> <span>01</span> Destination</NavText></NavLink>
-            <NavLink to="/crew"><NavText> <span>02</span> Crew</NavText></NavLink>
-            <NavLink to="/technology"><NavText> <span>03</span> Technology</NavText></NavLink>
+            <NavLink className="navLink" to="/" end><NavText> <span>00</span> Home</NavText></NavLink>
+            <NavLink className="navLink" to="/destination"><NavText> <span>01</span> Destination</NavText></NavLink>
+            <NavLink className="navLink" to="/crew"><NavText> <span>02</span> Crew</NavText></NavLink>
+            <NavLink className="navLink" to="/technology"><NavText> <span>03</span> Technology</NavText></NavLink>
           </NavLinks>
         </NavLinkWrapper>  
     </StyledHeader>
@@ -85,9 +85,11 @@ const NavLinkWrapper = styled.nav`
   }
 
   @media (min-width: 1200px) {
+    background-color: rgba(25, 27, 35, 0.5);
     backdrop-filter: blur(80px);
     top: 2rem;
-    background-color: rgba(25, 27, 35, 0.5);
+
+    
   }
 `
 const NavLinks = styled.ul`
@@ -100,13 +102,15 @@ const NavLinks = styled.ul`
 
   @media (min-width: 600px) {
     flex-direction: row;
-    gap:0.5rem;
+    gap: 0.5rem;
     position: static;
     margin: 0;
     justify-content: space-around;
     width: 80%;
   }
 `
+  
+  
 
 const Hamburger = styled.div`
   z-index: 2;

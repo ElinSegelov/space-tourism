@@ -4,11 +4,11 @@ import { Subheading1, Subheading2, DestinationH1 } from "../../styles/ReusableSt
 
 const SelectedDestination = ({ destination }) => {
   return (
-    <InfoWrapper>
-    <PitchSection>
+    <>
+      <section>
         <DestinationH1>{destination.name}</DestinationH1>
         <p>{destination.description}</p>
-      </PitchSection>
+      </section>
       <DestinationInfo>
         <div>
           <Subheading2>Avg. distance</Subheading2>
@@ -19,7 +19,7 @@ const SelectedDestination = ({ destination }) => {
           <DistanceInfo>{destination.travel}</DistanceInfo>
         </div>
       </DestinationInfo>
-      </InfoWrapper>
+      </>
   )
 }
 
@@ -31,33 +31,23 @@ const DistanceInfo = styled(Subheading1)`
   }
 `
 
-const InfoWrapper = styled.div`
-  @media (min-width: 1200px) {
-
-  }
-`
-
-const PitchSection = styled.section`
-  margin-bottom: 2rem;
-`
 const DestinationInfo = styled.section`
   border-top: ${({theme}) => `1px solid ${theme.colors.primaryText}`};
-  width: 95%;
+  width: 100%;
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  margin-top: 2rem;
 
-  @media (min-width:600px) {
+  @media (min-width: 600px) {
     flex-direction: row;
     justify-content: space-around;
   }
   
   @media (min-width: 1200px) {
-    width: 100%;
     padding-bottom: 0;
     justify-content: left;
     gap: 5rem;
-    
   }
 `

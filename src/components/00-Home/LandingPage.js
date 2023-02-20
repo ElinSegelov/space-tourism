@@ -122,11 +122,19 @@ const ExploreBubble = styled.div`
     font-size: 32px;
     }
   }
-
+  
   @media (min-width: 1200px) {
     height: 17rem;
     width: 17rem;
     right: 10%;
-    bottom: 10vh
+    bottom: 10vh;
+    transition: border right bottom content-box 1s;
+    
+    &&:hover {
+      border: 4rem solid rgba(25, 27, 35, 0.9);
+      right: calc(10% - 4rem);
+      bottom: calc(10vh - 4rem);
+      box-sizing: content-box;
+    }
   }
 `

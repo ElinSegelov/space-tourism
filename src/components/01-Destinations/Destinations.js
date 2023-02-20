@@ -29,38 +29,42 @@ const Destinations = () => {
         <NavAndInfo>
           <MidPageNav>
             <ul>
-              <li>
+              <DestinationLi>
                 <DestinationButton
+                  className="destinationButton"
                   value="Moon"
                   onClick={(e) => selectDestination(e.target.value)}
                   style={{ borderBottom: choice.name === "Moon" ? "3px solid white" : "none" }} >
                     Moon
                 </DestinationButton>
-              </li>
-              <li>
+              </DestinationLi>
+              <DestinationLi>
                 <DestinationButton
+                  className="destinationButton"
                   value="Mars"
                   onClick={(e) => selectDestination(e.target.value)}
                   style={{ borderBottom: choice.name === "Mars" ? "3px solid white" : "none" }} >
                     Mars
                 </DestinationButton>
-              </li>
-              <li>
+              </DestinationLi>
+              <DestinationLi>
                 <DestinationButton
+                  className="destinationButton"
                   value="Europa"
                   onClick={(e) => selectDestination(e.target.value)}
                   style={{ borderBottom: choice.name === "Europa" ? "3px solid white" : "none" }} >
                     Europa
                 </DestinationButton>
-              </li>
-              <li>
+              </DestinationLi>
+              <DestinationLi>
                 <DestinationButton
+                  className="destinationButton"
                   value="Titan"
                   onClick={(e) => selectDestination(e.target.value)}
                   style={{ borderBottom: choice.name === "Titan" ? "3px solid white" : "none" }} >
                     Titan
                 </DestinationButton>
-              </li>
+              </DestinationLi>
             </ul>
           </MidPageNav>
           <SelectedDestination destination={choice} />
@@ -82,12 +86,21 @@ const DestinationOuterWrapper = styled(OuterWrapper)`
  @media (min-width: 1200px) {
     background-image: url(${destinationBackgroundDesktop});
   }
+  `
 
-`
+const DestinationLi = styled.li`
+@media (min-width: 1200px) {
+  height: 3rem;
+  text-align: center;
+    &&:hover button {
+      border-bottom: 3px solid #979797 !important;
+    }
+  }
+  `
+
 const DestinationButton = styled.button`
   padding-bottom: 0.6rem;
 `
-
 const NavAndInfo = styled.div`
    @media (min-width: 1200px) {
     width: 40%;

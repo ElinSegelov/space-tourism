@@ -33,6 +33,7 @@ const CrewSlider = ({ crew, activeIndex, setActiveIndex }) => {
     return (
       <Dot
       // Opacity of button should change when it's active
+        className='crewDotSelector'
         style={{ opacity: index === activeIndex && '1'}}
         key={member.name}
         value={member.role}
@@ -114,5 +115,10 @@ const Dot = styled.button`
   @media (min-width: 1200px) {
     width: 1rem;
     height: 1rem;
+
+    &&:hover {
+		background-color: #979797;
+    opacity: 1;
+	  }
   }
 `
