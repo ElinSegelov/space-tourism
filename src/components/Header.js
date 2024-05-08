@@ -27,12 +27,12 @@ const Header = () => {
             <img src={close} alt="Open navmenu" />
           </Hamburger> }
         <NavLinkWrapper style={navMenuActive? {display:'flex'} : {display:'none'} }>
-          <NavLinks>
+
             <NavLink className="navLink" to="/" end><NavText> <span>00</span> Home</NavText></NavLink>
             <NavLink className="navLink" to="/destination"><NavText> <span>01</span> Destination</NavText></NavLink>
             <NavLink className="navLink" to="/crew"><NavText> <span>02</span> Crew</NavText></NavLink>
             <NavLink className="navLink" to="/technology"><NavText> <span>03</span> Technology</NavText></NavLink>
-          </NavLinks>
+
         </NavLinkWrapper>  
     </StyledHeader>
   )
@@ -73,26 +73,36 @@ const NavLinkWrapper = styled.nav`
   height: 100vh;
   backdrop-filter: blur(8px);
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding-top: 8rem;
+  padding-left: 1rem;
+  list-style: none;
   
   @media (min-width: 600px) {
-    height: 6rem;
+    align-items: center;
     background: ${({theme}) => theme.colors.bgNav};
     backdrop-filter: none;
     display: flex !important;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    gap: 0.5rem;
+    height: 6rem;
+    justify-content: space-around;
+    margin: 0;
     width: 55vw;
+    padding: 0;
   }
 
   @media (min-width: 1200px) {
     background-color: rgba(25, 27, 35, 0.5);
     backdrop-filter: blur(80px);
     top: 2rem;
-
+    
     
   }
 `
-const NavLinks = styled.ul`
+/* const NavLinks = styled.ul`
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -108,7 +118,7 @@ const NavLinks = styled.ul`
     justify-content: space-around;
     width: 80%;
   }
-`
+` */
   
   
 

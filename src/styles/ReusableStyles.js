@@ -72,7 +72,7 @@ export const Subheading2 = styled.h3`
   font-family: 'Barlow Condensed', sans-serif;
   margin-bottom: 1rem;
 `
-export const NavText = styled.li`
+export const NavText = styled.p`
   font-size: 20px;
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 300;
